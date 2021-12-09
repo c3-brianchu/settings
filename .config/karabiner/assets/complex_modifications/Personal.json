@@ -1,0 +1,162 @@
+{
+   "title": "Personal",
+   "rules": [
+      {
+         "description": "Ctrl+Enter to Cmd+Enter",
+         "manipulators": [
+            {
+               "type": "basic",
+               "from": {
+                  "modifiers": {
+                     "mandatory": [
+                        "left_control"
+                     ],
+                     "optional": [
+                        "caps_lock"
+                     ]
+                  },
+                  "key_code": "return_or_enter"
+               },
+               "to": [
+                  {
+                     "repeat": true,
+                     "key_code": "return_or_enter",
+                     "modifiers": [
+                        "left_gui"
+                     ]
+                  }
+               ]
+            },
+            {
+               "type": "basic",
+               "from": {
+                  "modifiers": {
+                     "mandatory": [
+                        "left_control"
+                     ],
+                     "optional": [
+                        "caps_lock"
+                     ]
+                  },
+                  "key_code": "keypad_enter"
+               },
+               "to": [
+                  {
+                     "repeat": true,
+                     "key_code": "keypad_enter",
+                     "modifiers": [
+                        "left_gui"
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "description": "PC-Style Open Closed Tab",
+         "manipulators": [
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "^com\\.microsoft\\.rdc$",
+                        "^com\\.microsoft\\.rdc\\.",
+                        "^net\\.sf\\.cord$",
+                        "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                        "^com\\.itap-mobile\\.qmote$",
+                        "^com\\.nulana\\.remotixmac$",
+                        "^com\\.p5sys\\.jump\\.mac\\.viewer$",
+                        "^com\\.p5sys\\.jump\\.mac\\.viewer\\.",
+                        "^com\\.teamviewer\\.TeamViewer$",
+                        "^com\\.vmware\\.horizon$",
+                        "^com\\.2X\\.Client\\.Mac$",
+                        "^com\\.vmware\\.fusion$",
+                        "^com\\.vmware\\.horizon$",
+                        "^com\\.vmware\\.view$",
+                        "^com\\.parallels\\.desktop$",
+                        "^com\\.parallels\\.vm$",
+                        "^com\\.parallels\\.desktop\\.console$",
+                        "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                        "^com\\.citrix\\.XenAppViewer$",
+                        "^com\\.vmware\\.proxyApp\\.",
+                        "^com\\.parallels\\.winapp\\.",
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$"
+                     ],
+                     "type": "frontmost_application_unless"
+                  }
+               ],
+               "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                     "mandatory": [
+                        "control",
+                        "shift"
+                     ],
+                     "optional": [
+                        "any"
+                     ]
+                  }
+               },
+               "to": [
+                  {
+                     "key_code": "t",
+                     "modifiers": [
+                        "left_command",
+                        "left_shift"
+                     ]
+                  }
+               ],
+               "type": "basic"
+            }
+         ]
+      },
+      {
+         "description": "MouseButton to Switch Space",
+         "manipulators": [
+            {
+               "type": "basic",
+               "from": {
+                  "pointing_button": "button4",
+                  "modifiers": {
+                     "optional": [
+                        "caps_lock"
+                     ]
+                  }
+               },
+               "to": [
+                  {
+                     "key_code": "left_arrow",
+                     "modifiers": [
+                        "left_control"
+                     ]
+                  }
+               ]
+            },
+            {
+               "type": "basic",
+               "from": {
+                  "pointing_button": "button5",
+                  "modifiers": {
+                     "optional": [
+                        "caps_lock"
+                     ]
+                  }
+               },
+               "to": [
+                  {
+                     "key_code": "right_arrow",
+                     "modifiers": [
+                        "left_control"
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
